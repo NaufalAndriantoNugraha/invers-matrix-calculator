@@ -4,14 +4,12 @@ Inverse Matrix Calculator
 
 import os
 import numpy as np
+from sys import exit
 from time import sleep
 
 
-def clear_window():
-    os.system("cls")
-
-
 def main():
+    clear_window()
     print("-----------------------------")
     print("| Inverse Matrix Calculator |")
     print("-----------------------------")
@@ -34,20 +32,41 @@ def main():
                 three_by_three_matrix()
             case 3:
                 clear_window()
-                print("-------------------------")
+                while True:
+                    print("--------------------------------------")
+                    print("| Apakah yakin keluar dari aplikasi? |")
+                    print("| [y/Y] Ya, keluar dari program.     |")
+                    print("| [n/N] Tidak, tetapi di program.    |")
+                    print("--------------------------------------")
+                    print("")
 
-                for i in range(3, 0, -1):
-                    print(f" - Keluar dari program! {i}")
-                    sleep(1)
+                    user_choice = input("> Input: ")
 
-                clear_window()
-                break
+                    if user_choice == "y" or user_choice == "Y":
+                        clear_window()
+                        exit(0)
+                    elif user_choice == "n" or user_choice == "N":
+                        clear_window()
+                        print("-----------------------------")
+                        print("| Inverse Matrix Calculator |")
+                        print("-----------------------------")
+                        break
+                    else:
+                        clear_window()
+                        print("--------------------------------------")
+                        print("| Opsi tidak valid.                  |")
+                        print("| Mohon masukkan opsi yang tersedia! |")
+                        print("--------------------------------------")
             case _:
                 clear_window()
                 print("--------------------------------------")
                 print("| Opsi tidak valid.                  |")
                 print("| Mohon masukkan opsi yang tersedia! |")
                 print("--------------------------------------")
+
+
+def clear_window():
+    os.system("cls")
 
 
 def two_by_two_matrix():
@@ -63,12 +82,12 @@ def two_by_two_matrix():
         for row in range(1, 3):
             for column in range(1, 3):
                 if row == 1:
-                    print("--------------------------------------------")
+                    # print("--------------------------------------------")
                     print(f"- Masukkan nilai baris {row} kolom {column}")
                     first_row.append(int(input("> Input: ")))
                     print("")
                 else:
-                    print("--------------------------------------------")
+                    # print("--------------------------------------------")
                     print(f"- Masukkan nilai baris {row} kolom {column}")
                     second_row.append(int(input("> Input: ")))
                     print("")
@@ -86,12 +105,13 @@ def two_by_two_matrix():
         print("Berikut merupakan nilai matriks yang Anda berikan: ")
         print(first_row)
         print(second_row)
+        print("")
 
-        print("---------------------------------------------------")
         print("Berikut merupakan inverse matrik dari input Anda:  ")
 
         try:
             print(np.linalg.inv(matrix_value))
+            print("---------------------------------------------------")
         except np.linalg.LinAlgError:
             print("Matriks tidak dapat di invers")
 
@@ -99,7 +119,12 @@ def two_by_two_matrix():
         print("")
         print("")
 
-        print("Kembali ke menu")
+        print("-- Kembali ke menu")
+        print("")
+
+        print("-----------------------------")
+        print("| Inverse Matrix Calculator |")
+        print("-----------------------------")
         break
 
 
@@ -117,17 +142,17 @@ def three_by_three_matrix():
         for row in range(1, 4):
             for column in range(1, 4):
                 if row == 1:
-                    print("--------------------------------------------")
+                    # print("--------------------------------------------")
                     print(f"- Masukkan nilai baris {row} kolom {column}")
                     first_row.append(int(input("> Input: ")))
                     print("")
                 elif row == 2:
-                    print("--------------------------------------------")
+                    # print("--------------------------------------------")
                     print(f"- Masukkan nilai baris {row} kolom {column}")
                     second_row.append(int(input("> Input: ")))
                     print("")
                 else:
-                    print("--------------------------------------------")
+                    # print("--------------------------------------------")
                     print(f"- Masukkan nilai baris {row} kolom {column}")
                     third_row.append(int(input("> Input: ")))
                     print("")
@@ -147,12 +172,13 @@ def three_by_three_matrix():
         print(first_row)
         print(second_row)
         print(third_row)
+        print("")
 
-        print("---------------------------------------------------")
         print("Berikut merupakan inverse matrik dari input Anda:  ")
 
         try:
             print(np.linalg.inv(matrix_value))
+            print("---------------------------------------------------")
         except np.linalg.LinAlgError:
             print("Matriks tidak dapat di invers")
 
@@ -160,7 +186,12 @@ def three_by_three_matrix():
         print("")
         print("")
 
-        print("Kembali ke menu")
+        print("-- Kembali ke menu")
+        print("")
+
+        print("-----------------------------")
+        print("| Inverse Matrix Calculator |")
+        print("-----------------------------")
         break
 
 
