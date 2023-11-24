@@ -78,56 +78,49 @@ def two_by_two_matrix():
     print("| Matriks 2 kali 2 |")
     print("--------------------")
     print("")
-
-    first_row = []
-    second_row = []
-
+    
     while True:
-        for row in range(1, 3):
-            for column in range(1, 3):
-                if row == 1:
-                    print(f"- Masukkan nilai baris {row} kolom {column}")
-                    first_row.append(int(input("> Input: ")))
-                    print("")
-                else:
-                    print(f"- Masukkan nilai baris {row} kolom {column}")
-                    second_row.append(int(input("> Input: ")))
-                    print("")
+        matrix = []
+        for row in range(1, (2 + 1)):
+            current_row = []
 
-        matrix_value = np.array(
-            [
-                first_row,
-                second_row
-            ]
-        )
+            for column in range(1, (2 + 1)):
+                print(f"- Masukkan nilai baris {row} kolom {column}")
+                current_element = int(input("> Input: "))
+                print("")
 
-        clear_window()
+                current_row.append(current_element)
 
-        print("---------------------------------------------------")
-        print("Berikut merupakan nilai matriks yang Anda berikan: ")
-        print(first_row)
-        print(second_row)
-        print("")
-
-        print("Berikut merupakan inverse matrik dari input Anda:  ")
+            matrix.append(current_row)
+    
+        matrix_array_numpy = np.array(matrix)
 
         try:
-            print(np.linalg.inv(matrix_value))
-            print("---------------------------------------------------")
-        except np.linalg.LinAlgError:
-            print("Matriks tidak dapat di invers")
+            inverse_matrix = np.linalg.inv(matrix_array_numpy)
+            clear_window()
+            print("------------------------------------------------------")
+            print("Berikut merupakan nilai matriks yang Anda berikan: ")
+            print(f"{matrix}")
+            print("")
 
-        sleep(6)
-        print("")
-        print("")
+            print("Berikut merupakan inverse matris dari input Anda:")
+            print(f"{inverse_matrix}|")
+            print("------------------------------------------------------")
+            sleep(6)
+            print("")
+            print("")
 
-        print("-- Kembali ke menu")
-        print("")
+            print("-- Kembali ke menu")
+            print("")
 
-        print("-----------------------------")
-        print("| Inverse Matrix Calculator |")
-        print("-----------------------------")
-        break
+            print("-----------------------------")
+            print("| Inverse Matrix Calculator |")
+            print("-----------------------------")
+            break
+
+        except:
+            print("-----------------------------")
+            print("Matriks tidak memiliki invers")
 
 
 def three_by_three_matrix():
@@ -136,63 +129,49 @@ def three_by_three_matrix():
     print("| Matriks 3 kali 3 |")
     print("--------------------")
     print("")
-
-    first_row = []
-    second_row = []
-    third_row = []
-
+    
     while True:
-        for row in range(1, 4):
-            for column in range(1, 4):
-                if row == 1:
-                    print(f"- Masukkan nilai baris {row} kolom {column}")
-                    first_row.append(int(input("> Input: ")))
-                    print("")
-                elif row == 2:
-                    print(f"- Masukkan nilai baris {row} kolom {column}")
-                    second_row.append(int(input("> Input: ")))
-                    print("")
-                else:
-                    print(f"- Masukkan nilai baris {row} kolom {column}")
-                    third_row.append(int(input("> Input: ")))
-                    print("")
+        matrix = []
+        for row in range(1, (3 + 1)):
+            current_row = []
 
-        matrix_value = np.array(
-            [
-                first_row,
-                second_row,
-                third_row
-            ]
-        )
+            for column in range(1, (3 + 1)):
+                print(f"- Masukkan nilai baris {row} kolom {column}")
+                current_element = int(input("> Input: "))
+                print("")
 
-        clear_window()
+                current_row.append(current_element)
 
-        print("---------------------------------------------------")
-        print("Berikut merupakan nilai matriks yang Anda berikan: ")
-        print(first_row)
-        print(second_row)
-        print(third_row)
-        print("")
-
-        print("Berikut merupakan inverse matrik dari input Anda:  ")
+            matrix.append(current_row)
+    
+        matrix_array_numpy = np.array(matrix)
 
         try:
-            print(np.linalg.inv(matrix_value))
-            print("---------------------------------------------------")
-        except np.linalg.LinAlgError:
-            print("Matriks tidak dapat di invers")
+            inverse_matrix = np.linalg.inv(matrix_array_numpy)
+            clear_window()
+            print("------------------------------------------------------")
+            print("Berikut merupakan nilai matriks yang Anda berikan: ")
+            print(f"{matrix}")
+            print("")
 
-        sleep(6)
-        print("")
-        print("")
+            print("Berikut merupakan inverse matris dari input Anda:")
+            print(f"{inverse_matrix}|")
+            print("------------------------------------------------------")
+            sleep(6)
+            print("")
+            print("")
 
-        print("-- Kembali ke menu")
-        print("")
+            print("-- Kembali ke menu")
+            print("")
 
-        print("-----------------------------")
-        print("| Inverse Matrix Calculator |")
-        print("-----------------------------")
-        break
+            print("-----------------------------")
+            print("| Inverse Matrix Calculator |")
+            print("-----------------------------")
+            break
+
+        except:
+            print("-----------------------------")
+            print("Matriks tidak memiliki invers")
 
 
 def user_defined_matrix():
@@ -255,6 +234,7 @@ def user_defined_matrix():
             break
 
         except:
+            print("-----------------------------")
             print("Matriks tidak memiliki invers")
 
 
