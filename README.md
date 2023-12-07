@@ -3,6 +3,9 @@ Inverse Matrix Calculator merupakan kalkulator yang memungkinkan
 pengguna untuk melakukan perhitungan *inverse matrix* dengan memasukkan
 input pada program.
 
-# Setup for The Project
+# Platform yang Didukung
+- Windows OS
+
+# Setup Untuk Program
 - Python Programming Language (>=3.10)
 - Text Editor/IDE
