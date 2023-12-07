@@ -11,3 +11,8 @@ input pada program.
 # Setup Untuk Program
 - Python Programming Language (>=3.10)
 - Text Editor/IDE
+
+# Menjalankan Program
+Untuk menjalankan program Anda melakukan
+perintah `python nama_file.py`, nama file dapat Anda 
+ganti dengan inverse_matrix.py
