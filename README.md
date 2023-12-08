@@ -9,7 +9,7 @@ input pada program.
 - Windows OS
 
 ## Setup Untuk Program
-- Python Programming Language (Versi >=3.10)
+- Bahasa pemrograman Python (Versi >=3.10)
 - Text Editor/IDE
 
 ## Menjalankan Program
