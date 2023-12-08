@@ -1,4 +1,4 @@
-# simple_inverse_matrix_calculator
+# Invers Matrix Calculator
 Inverse Matrix Calculator merupakan kalkulator yang memungkinkan
 pengguna untuk melakukan perhitungan *inverse matrix* dengan memasukkan
 input pada program.
