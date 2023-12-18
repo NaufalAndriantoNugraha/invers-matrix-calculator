@@ -7,6 +7,8 @@ input pada program.
 
 ## Platform yang Didukung
 - Windows OS
+- MacOS
+- Linux
 
 ## Setup Untuk Program
 - Bahasa pemrograman Python (Versi >=3.10)
