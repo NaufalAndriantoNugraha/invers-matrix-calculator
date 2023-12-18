@@ -17,4 +17,4 @@ input pada program.
 ## Menjalankan Program
 Untuk menjalankan program Anda melakukan
 perintah `python nama_file.py`, nama file dapat Anda 
-ganti dengan inverse_matrix.py
+ganti dengan `inverse_matrix.py`
