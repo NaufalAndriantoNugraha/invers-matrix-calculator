@@ -3,6 +3,7 @@ Inverse Matrix Calculator
 """
 
 import os
+import platform
 from sys import exit
 from time import sleep
 
@@ -68,8 +69,10 @@ def main():
 
 
 def clear_console():
-    os.system("cls")
-
+    if platform.system() == "Windows":
+        os.system("cls")
+    else:
+        os.system("clear")
 
 def line_break(size=1):
     print("" * size)
